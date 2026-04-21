@@ -3,6 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KL4X5ZYGME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KL4X5ZYGME');
+</script>
 <title>CERTICOURT — Pickleball Pro Courts</title>
 <meta name="description" content="CERTICOURT — The only WPC Series certified modular pickleball court system. Quick Setup. True Bounce.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,598 +32,150 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--bg); overflow-x: hidden; }
 
-body {
-  font-family: 'DM Sans', sans-serif;
-  color: var(--text);
-  background: var(--bg);
-  overflow-x: hidden;
-}
-
-/* ===== UTILITY ===== */
 .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
 
-/* ===== LANGUAGE SWITCHER ===== */
-.lang-bar {
-  background: var(--dark);
-  padding: 8px 0;
-  text-align: center;
-  position: relative;
-  z-index: 100;
-}
-.lang-bar button {
-  background: none;
-  border: 1px solid transparent;
-  color: #888;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 4px 12px;
-  cursor: pointer;
-  transition: all 0.3s;
-  border-radius: 3px;
-}
+.lang-bar { background: var(--dark); padding: 8px 0; text-align: center; position: relative; z-index: 100; }
+.lang-bar button { background: none; border: 1px solid transparent; color: #888; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; cursor: pointer; transition: all 0.3s; border-radius: 3px; }
 .lang-bar button:hover { color: #fff; }
-.lang-bar button.active {
-  color: #fff;
-  border-color: var(--brand);
-  background: rgba(20,70,160,0.2);
-}
+.lang-bar button.active { color: #fff; border-color: var(--brand); background: rgba(20,70,160,0.2); }
 
-/* ===== NAVIGATION ===== */
-nav {
-  background: rgba(255,255,255,0.97);
-  backdrop-filter: blur(10px);
-  position: sticky;
-  top: 0;
-  z-index: 90;
-  border-bottom: 1px solid #eee;
-  padding: 14px 0;
-}
-nav .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  text-decoration: none;
-}
-.nav-logo .certi {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 28px;
-  color: var(--text);
-  letter-spacing: 1px;
-  line-height: 1;
-}
-.nav-logo .court-block {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 28px;
-  color: #fff;
-  background: var(--brand);
-  padding: 1px 8px 0;
-  line-height: 1;
-  letter-spacing: 1px;
-  margin-left: 3px;
-  transform: skewX(-5deg);
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-}
-.nav-logo .court-block::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: repeating-linear-gradient(90deg, transparent, transparent calc(20% - 0.5px), var(--panel-line) calc(20% - 0.5px), var(--panel-line) calc(20% + 0.5px), transparent calc(20% + 0.5px), transparent calc(40% - 0.5px), var(--panel-line) calc(40% - 0.5px), var(--panel-line) calc(40% + 0.5px), transparent calc(40% + 0.5px), transparent calc(60% - 0.5px), var(--panel-line) calc(60% - 0.5px), var(--panel-line) calc(60% + 0.5px), transparent calc(60% + 0.5px), transparent calc(80% - 0.5px), var(--panel-line) calc(80% - 0.5px), var(--panel-line) calc(80% + 0.5px), transparent calc(80% + 0.5px), transparent 100%);
-  pointer-events: none;
-}
-.nav-logo .court-block::after {
-  content: '';
-  position: absolute;
-  left: 0; right: 0; top: 50%;
-  height: 1px;
-  background: rgba(255,255,255,0.08);
-  pointer-events: none;
-}
+nav { background: rgba(255,255,255,0.97); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 90; border-bottom: 1px solid #eee; padding: 14px 0; }
+nav .container { display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { display: flex; align-items: center; gap: 0; text-decoration: none; }
+.nav-logo .certi { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--text); letter-spacing: 1px; line-height: 1; }
+.nav-logo .court-block { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: #fff; background: var(--brand); padding: 1px 8px 0; line-height: 1; letter-spacing: 1px; margin-left: 3px; transform: skewX(-5deg); display: inline-block; position: relative; overflow: hidden; }
+.nav-logo .court-block::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: repeating-linear-gradient(90deg, transparent, transparent calc(20% - 0.5px), var(--panel-line) calc(20% - 0.5px), var(--panel-line) calc(20% + 0.5px), transparent calc(20% + 0.5px), transparent calc(40% - 0.5px), var(--panel-line) calc(40% - 0.5px), var(--panel-line) calc(40% + 0.5px), transparent calc(40% + 0.5px), transparent calc(60% - 0.5px), var(--panel-line) calc(60% - 0.5px), var(--panel-line) calc(60% + 0.5px), transparent calc(60% + 0.5px), transparent calc(80% - 0.5px), var(--panel-line) calc(80% - 0.5px), var(--panel-line) calc(80% + 0.5px), transparent calc(80% + 0.5px), transparent 100%); pointer-events: none; }
 
 .nav-links { display: flex; gap: 28px; align-items: center; }
-.nav-links a {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-light);
-  text-decoration: none;
-  letter-spacing: 0.5px;
-  transition: color 0.3s;
-}
+.nav-links a { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; color: var(--text-light); text-decoration: none; letter-spacing: 0.5px; transition: color 0.3s; }
 .nav-links a:hover { color: var(--brand); }
-
-.nav-wa {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--wa-green);
-  color: #fff !important;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 12px !important;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
+.nav-wa { display: inline-flex; align-items: center; gap: 6px; background: var(--wa-green); color: #fff !important; padding: 8px 16px; border-radius: 6px; font-size: 12px !important; letter-spacing: 1px; text-transform: uppercase; transition: transform 0.2s, box-shadow 0.2s; }
 .nav-wa:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(37,211,102,0.3); color: #fff !important; }
 .nav-wa svg { width: 16px; height: 16px; fill: #fff; }
-
 .mobile-menu { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
 .mobile-menu span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; transition: 0.3s; }
 
-/* ===== HERO ===== */
-.hero {
-  background: var(--dark);
-  position: relative;
-  overflow: hidden;
-  padding: 100px 0 80px;
-  min-height: 85vh;
-  display: flex;
-  align-items: center;
-}
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background:
-    repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(20,70,160,0.04) 79px, rgba(20,70,160,0.04) 80px),
-    repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(20,70,160,0.04) 79px, rgba(20,70,160,0.04) 80px);
-  pointer-events: none;
-}
+.hero { background: var(--dark); position: relative; overflow: hidden; padding: 100px 0 80px; min-height: 85vh; display: flex; align-items: center; }
+.hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(20,70,160,0.04) 79px, rgba(20,70,160,0.04) 80px), repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(20,70,160,0.04) 79px, rgba(20,70,160,0.04) 80px); pointer-events: none; }
 .hero .container { position: relative; z-index: 2; }
-
-.hero-badge {
-  display: inline-block;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--brand-light);
-  border: 1px solid rgba(20,70,160,0.3);
-  padding: 6px 16px;
-  border-radius: 4px;
-  margin-bottom: 30px;
-  animation: fadeInUp 0.8s ease;
-}
-
-.hero-logo {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  animation: fadeInUp 0.8s ease 0.1s both;
-}
-.hero-logo .certi {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(60px, 10vw, 110px);
-  color: #fff;
-  line-height: 1;
-  letter-spacing: 3px;
-}
-.hero-logo .court-block {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(60px, 10vw, 110px);
-  color: #fff;
-  background: var(--brand);
-  padding: 3px 20px 0;
-  line-height: 1;
-  letter-spacing: 3px;
-  margin-left: 8px;
-  transform: skewX(-5deg);
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-}
-.hero-logo .court-block::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: repeating-linear-gradient(90deg, transparent, transparent calc(20% - 0.5px), var(--panel-line) calc(20% - 0.5px), var(--panel-line) calc(20% + 0.5px), transparent calc(20% + 0.5px), transparent calc(40% - 0.5px), var(--panel-line) calc(40% - 0.5px), var(--panel-line) calc(40% + 0.5px), transparent calc(40% + 0.5px), transparent calc(60% - 0.5px), var(--panel-line) calc(60% - 0.5px), var(--panel-line) calc(60% + 0.5px), transparent calc(60% + 0.5px), transparent calc(80% - 0.5px), var(--panel-line) calc(80% - 0.5px), var(--panel-line) calc(80% + 0.5px), transparent calc(80% + 0.5px), transparent 100%);
-  pointer-events: none;
-}
-.hero-logo .court-block::after {
-  content: '';
-  position: absolute;
-  left: 0; right: 0; top: 50%;
-  height: 1px;
-  background: rgba(255,255,255,0.06);
-  pointer-events: none;
-}
-
-.hero-subtitle {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-  color: var(--brand-light);
-  margin-bottom: 6px;
-  animation: fadeInUp 0.8s ease 0.2s both;
-}
-
-.hero-claim {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: #555;
-  margin-bottom: 40px;
-  animation: fadeInUp 0.8s ease 0.3s both;
-}
-
-.hero-text {
-  font-size: 17px;
-  color: #999;
-  max-width: 560px;
-  line-height: 1.8;
-  margin-bottom: 40px;
-  animation: fadeInUp 0.8s ease 0.4s both;
-}
-
-.hero-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--wa-green);
-  color: #fff;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 16px 36px;
-  border-radius: 6px;
-  transform: skewX(-3deg);
-  transition: all 0.3s;
-  animation: fadeInUp 0.8s ease 0.5s both;
-}
+.hero-badge { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--brand-light); border: 1px solid rgba(20,70,160,0.3); padding: 6px 16px; border-radius: 4px; margin-bottom: 30px; animation: fadeInUp 0.8s ease; }
+.hero-logo { display: flex; align-items: center; margin-bottom: 10px; animation: fadeInUp 0.8s ease 0.1s both; }
+.hero-logo .certi { font-family: 'Bebas Neue', sans-serif; font-size: clamp(60px, 10vw, 110px); color: #fff; line-height: 1; letter-spacing: 3px; }
+.hero-logo .court-block { font-family: 'Bebas Neue', sans-serif; font-size: clamp(60px, 10vw, 110px); color: #fff; background: var(--brand); padding: 3px 20px 0; line-height: 1; letter-spacing: 3px; margin-left: 8px; transform: skewX(-5deg); display: inline-block; position: relative; overflow: hidden; }
+.hero-logo .court-block::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: repeating-linear-gradient(90deg, transparent, transparent calc(20% - 0.5px), var(--panel-line) calc(20% - 0.5px), var(--panel-line) calc(20% + 0.5px), transparent calc(20% + 0.5px), transparent calc(40% - 0.5px), var(--panel-line) calc(40% - 0.5px), var(--panel-line) calc(40% + 0.5px), transparent calc(40% + 0.5px), transparent calc(60% - 0.5px), var(--panel-line) calc(60% - 0.5px), var(--panel-line) calc(60% + 0.5px), transparent calc(60% + 0.5px), transparent calc(80% - 0.5px), var(--panel-line) calc(80% - 0.5px), var(--panel-line) calc(80% + 0.5px), transparent calc(80% + 0.5px), transparent 100%); pointer-events: none; }
+.hero-subtitle { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 600; letter-spacing: 6px; text-transform: uppercase; color: var(--brand-light); margin-bottom: 6px; animation: fadeInUp 0.8s ease 0.2s both; }
+.hero-claim { font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 400; letter-spacing: 4px; text-transform: uppercase; color: #555; margin-bottom: 40px; animation: fadeInUp 0.8s ease 0.3s both; }
+.hero-text { font-size: 17px; color: #999; max-width: 560px; line-height: 1.8; margin-bottom: 40px; animation: fadeInUp 0.8s ease 0.4s both; }
+.hero-cta { display: inline-flex; align-items: center; gap: 10px; background: var(--wa-green); color: #fff; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; padding: 16px 36px; border-radius: 6px; transform: skewX(-3deg); transition: all 0.3s; animation: fadeInUp 0.8s ease 0.5s both; }
 .hero-cta:hover { transform: skewX(-3deg) translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,0.3); }
 .hero-cta svg { width: 20px; height: 20px; fill: #fff; transform: skewX(3deg); }
 .hero-cta span { transform: skewX(3deg); display: inline-block; }
 
-/* ===== WPC BADGE ===== */
-.wpc-strip {
-  background: var(--brand);
-  padding: 20px 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.wpc-strip::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: repeating-linear-gradient(90deg, transparent, transparent calc(10% - 0.5px), rgba(255,255,255,0.04) calc(10% - 0.5px), rgba(255,255,255,0.04) calc(10% + 0.5px), transparent calc(10% + 0.5px));
-  pointer-events: none;
-}
-.wpc-strip p {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: #fff;
-  position: relative;
-  z-index: 2;
-}
+.wpc-strip { background: var(--brand); padding: 20px 0; text-align: center; position: relative; overflow: hidden; }
+.wpc-strip::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: repeating-linear-gradient(90deg, transparent, transparent calc(10% - 0.5px), rgba(255,255,255,0.04) calc(10% - 0.5px), rgba(255,255,255,0.04) calc(10% + 0.5px), transparent calc(10% + 0.5px)); pointer-events: none; }
+.wpc-strip p { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 5px; text-transform: uppercase; color: #fff; position: relative; z-index: 2; }
 
-/* ===== ADVANTAGES ===== */
-.advantages {
-  padding: 80px 0;
-  background: var(--bg-off);
-}
-.section-label {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: var(--brand);
-  margin-bottom: 10px;
-}
-.section-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(36px, 5vw, 52px);
-  color: var(--text);
-  letter-spacing: 2px;
-  line-height: 1.1;
-  margin-bottom: 50px;
-}
-
-.adv-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.adv-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 32px 28px;
-  border: 1px solid #eee;
-  transition: all 0.3s;
-  position: relative;
-  overflow: hidden;
-}
-.adv-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
-  border-color: var(--brand);
-}
-.adv-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 4px;
-  height: 100%;
-  background: var(--brand);
-  transform: scaleY(0);
-  transition: transform 0.3s;
-  transform-origin: top;
-}
+.advantages { padding: 80px 0; background: var(--bg-off); }
+.section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 5px; text-transform: uppercase; color: var(--brand); margin-bottom: 10px; }
+.section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(36px, 5vw, 52px); color: var(--text); letter-spacing: 2px; line-height: 1.1; margin-bottom: 50px; }
+.adv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.adv-card { background: #fff; border-radius: 12px; padding: 32px 28px; border: 1px solid #eee; transition: all 0.3s; position: relative; overflow: hidden; }
+.adv-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); border-color: var(--brand); }
+.adv-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--brand); transform: scaleY(0); transition: transform 0.3s; transform-origin: top; }
 .adv-card:hover::before { transform: scaleY(1); }
+.adv-icon { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--brand); background: rgba(20,70,160,0.08); width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 8px; margin-bottom: 16px; letter-spacing: 1px; }
+.adv-card h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+.adv-card p { font-size: 14px; color: var(--text-light); line-height: 1.7; }
 
-.adv-icon {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 22px;
-  color: var(--brand);
-  background: rgba(20,70,160,0.08);
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  margin-bottom: 16px;
-  letter-spacing: 1px;
-}
-.adv-card h3 {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 10px;
-}
-.adv-card p {
-  font-size: 14px;
-  color: var(--text-light);
-  line-height: 1.7;
-}
-
-/* ===== HOW IT WORKS ===== */
-.how {
-  padding: 80px 0;
-  background: var(--dark);
-  color: #fff;
-}
+.how { padding: 80px 0; background: var(--dark); color: #fff; }
 .how .section-title { color: #fff; }
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 20px; }
+.step { text-align: center; position: relative; }
+.step-num { font-family: 'Bebas Neue', sans-serif; font-size: 64px; color: var(--brand); line-height: 1; margin-bottom: 14px; }
+.step h3 { font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.step p { font-size: 13px; color: #888; line-height: 1.6; }
+.step-arrow { position: absolute; right: -20px; top: 40px; color: #333; font-size: 24px; }
 
-.steps {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  margin-top: 20px;
-}
-.step {
-  text-align: center;
-  position: relative;
-}
-.step-num {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 64px;
-  color: var(--brand);
-  line-height: 1;
-  margin-bottom: 14px;
-}
-.step h3 {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 8px;
-}
-.step p {
-  font-size: 13px;
-  color: #888;
-  line-height: 1.6;
-}
-.step-arrow {
-  position: absolute;
-  right: -20px;
-  top: 40px;
-  color: #333;
-  font-size: 24px;
-}
-
-/* ===== SPECS ===== */
-.specs {
-  padding: 80px 0;
-  background: var(--bg);
-}
-
-.spec-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
+.specs { padding: 80px 0; background: var(--bg); }
+.spec-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
 .spec-table tr { border-bottom: 1px solid #eee; }
-.spec-table td {
-  padding: 16px 20px;
-  font-size: 15px;
-}
-.spec-table td:first-child {
-  font-weight: 700;
-  color: var(--text);
-  width: 35%;
-}
-.spec-table td:last-child {
-  color: var(--text-light);
-}
+.spec-table td { padding: 16px 20px; font-size: 15px; }
+.spec-table td:first-child { font-weight: 700; color: var(--text); width: 35%; }
+.spec-table td:last-child { color: var(--text-light); }
 .spec-table tr:nth-child(even) { background: var(--bg-off); }
 
-/* ===== USE CASES ===== */
-.usecases {
-  padding: 80px 0;
-  background: var(--bg-off);
-}
-.uc-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-.uc-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 36px 32px;
-  border: 1px solid #eee;
-  transition: all 0.3s;
-}
-.uc-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
-.uc-card h3 {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--brand);
-  margin-bottom: 12px;
-}
-.uc-card p {
-  font-size: 14px;
-  color: var(--text-light);
-  line-height: 1.7;
-}
+/* ===== COLOR CONFIGURATOR ===== */
+.colorizer { padding: 80px 0; background: var(--bg-off); }
+.colorizer-sub { font-size: 15px; color: var(--text-light); max-width: 600px; line-height: 1.7; margin-bottom: 40px; }
+.cc-wrap { background: #fff; border-radius: 16px; padding: 32px; border: 1px solid #e8e8e8; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
+.cc-stage { border-radius: 10px; overflow: hidden; margin-bottom: 28px; }
+.cc-stage svg { width: 100%; height: auto; display: block; }
+.cc-zones { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+.cc-zlabel { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; color: var(--brand); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 4px; border-left: 3px solid var(--brand); padding-left: 8px; }
+.cc-zname { font-size: 11px; color: var(--text-light); font-weight: 500; margin-bottom: 10px; min-height: 16px; padding-left: 11px; }
+.cc-pal { display: grid; grid-template-columns: repeat(6, 1fr); gap: 5px; }
+.cc-dot { width: 100%; aspect-ratio: 1; border-radius: 50%; cursor: pointer; border: 2px solid #fff; box-shadow: 0 0 0 1px #ccc; transition: transform .12s, box-shadow .12s; }
+.cc-dot:hover { transform: scale(1.25); z-index: 2; position: relative; }
+.cc-dot.on { box-shadow: 0 0 0 2.5px var(--brand); transform: scale(1.12); }
+.cc-viewrow { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+.cc-viewlabel { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: .05em; }
+.cc-tabs { display: flex; border: 1.5px solid #ddd; border-radius: 20px; overflow: hidden; background: var(--bg-off); }
+.cc-tab { padding: 6px 18px; font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; cursor: pointer; border: none; background: transparent; color: #888; transition: all .2s; }
+.cc-tab.on { background: var(--brand); color: #fff; }
+.cc-countrow { display: none; align-items: center; gap: 10px; }
+.cc-countrow.visible { display: flex; }
+.cc-countlabel { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: .05em; }
+.cc-cbtns { display: flex; gap: 6px; }
+.cc-cbtn { padding: 5px 14px; font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; border-radius: 14px; border: 1.5px solid #ccc; background: #fff; color: #888; cursor: pointer; transition: all .15s; }
+.cc-cbtn.on { background: var(--brand); color: #fff; border-color: var(--brand); }
+.cc-footer { display: flex; gap: 10px; flex-wrap: wrap; padding-top: 20px; border-top: 1px solid #eee; }
+.cc-btn { display: inline-flex; align-items: center; gap: 7px; padding: 10px 20px; border-radius: 6px; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; cursor: pointer; border: none; text-decoration: none; transition: all .2s; }
+.cc-btn-primary { background: var(--brand); color: #fff; }
+.cc-btn-primary:hover { background: var(--brand-dark); transform: translateY(-1px); }
+.cc-btn-outline { background: #fff; color: var(--brand); border: 2px solid var(--brand); }
+.cc-btn-outline:hover { background: rgba(20,70,160,.05); transform: translateY(-1px); }
+.cc-btn-wa { background: var(--wa-green); color: #fff; }
+.cc-btn-wa:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(37,211,102,.3); }
+.cc-summary { display: none; margin-top: 20px; background: var(--bg-off); border-radius: 10px; padding: 20px 24px; border: 1px solid #e0e0e0; }
+.cc-summary h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text); margin-bottom: 14px; }
+.cc-summary table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.cc-summary th { text-align: left; padding: 6px 10px; font-size: 10px; font-weight: 700; color: #aaa; text-transform: uppercase; letter-spacing: .05em; border-bottom: 1px solid #ddd; }
+.cc-summary td { padding: 9px 10px; border-bottom: 1px solid #f0f0f0; color: #333; }
+.cc-sw { display: inline-block; width: 12px; height: 12px; border-radius: 50%; vertical-align: middle; margin-right: 6px; border: 1px solid rgba(0,0,0,.1); }
+.cc-tns { color: var(--brand); font-weight: 700; }
+.cc-note { font-size: 11px; color: #bbb; margin-top: 10px; font-style: italic; }
 
-/* ===== CTA SECTION ===== */
-.cta-section {
-  padding: 80px 0;
-  background: var(--brand);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.cta-section::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: repeating-linear-gradient(90deg, transparent, transparent calc(5% - 0.5px), rgba(255,255,255,0.03) calc(5% - 0.5px), rgba(255,255,255,0.03) calc(5% + 0.5px), transparent calc(5% + 0.5px));
-  pointer-events: none;
-}
-.cta-section h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(36px, 5vw, 56px);
-  color: #fff;
-  letter-spacing: 3px;
-  margin-bottom: 16px;
-  position: relative;
-  z-index: 2;
-}
-.cta-section p {
-  font-size: 16px;
-  color: rgba(255,255,255,0.7);
-  margin-bottom: 36px;
-  position: relative;
-  z-index: 2;
-}
-.cta-wa {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  background: var(--wa-green);
-  color: #fff;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 18px 44px;
-  border-radius: 8px;
-  transition: all 0.3s;
-  position: relative;
-  z-index: 2;
-}
+.usecases { padding: 80px 0; background: var(--bg); }
+.uc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.uc-card { background: #fff; border-radius: 12px; padding: 36px 32px; border: 1px solid #eee; transition: all 0.3s; }
+.uc-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+.uc-card h3 { font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 700; color: var(--brand); margin-bottom: 12px; }
+.uc-card p { font-size: 14px; color: var(--text-light); line-height: 1.7; }
+
+.cta-section { padding: 80px 0; background: var(--brand); text-align: center; position: relative; overflow: hidden; }
+.cta-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: repeating-linear-gradient(90deg, transparent, transparent calc(5% - 0.5px), rgba(255,255,255,0.03) calc(5% - 0.5px), rgba(255,255,255,0.03) calc(5% + 0.5px), transparent calc(5% + 0.5px)); pointer-events: none; }
+.cta-section h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(36px, 5vw, 56px); color: #fff; letter-spacing: 3px; margin-bottom: 16px; position: relative; z-index: 2; }
+.cta-section p { font-size: 16px; color: rgba(255,255,255,0.7); margin-bottom: 36px; position: relative; z-index: 2; }
+.cta-wa { display: inline-flex; align-items: center; gap: 12px; background: var(--wa-green); color: #fff; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; padding: 18px 44px; border-radius: 8px; transition: all 0.3s; position: relative; z-index: 2; }
 .cta-wa:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,0.4); }
 .cta-wa svg { width: 22px; height: 22px; fill: #fff; }
 
-/* ===== FOOTER ===== */
-footer {
-  background: var(--dark);
-  padding: 40px 0 24px;
-  text-align: center;
-}
-.footer-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  margin-bottom: 16px;
-}
-.footer-logo .certi {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 24px;
-  color: #fff;
-  letter-spacing: 1px;
-  line-height: 1;
-}
-.footer-logo .court-block {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 24px;
-  color: #fff;
-  background: var(--brand);
-  padding: 1px 7px 0;
-  line-height: 1;
-  letter-spacing: 1px;
-  margin-left: 3px;
-  transform: skewX(-5deg);
-  display: inline-block;
-}
-footer p {
-  font-size: 12px;
-  color: #555;
-  letter-spacing: 1px;
-}
+footer { background: var(--dark); padding: 40px 0 24px; text-align: center; }
+.footer-logo { display: flex; align-items: center; justify-content: center; gap: 0; margin-bottom: 16px; }
+.footer-logo .certi { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: #fff; letter-spacing: 1px; line-height: 1; }
+.footer-logo .court-block { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: #fff; background: var(--brand); padding: 1px 7px 0; line-height: 1; letter-spacing: 1px; margin-left: 3px; transform: skewX(-5deg); display: inline-block; }
+footer p { font-size: 12px; color: #555; letter-spacing: 1px; }
 
-/* ===== FLOATING WA BUTTON ===== */
-.wa-float {
-  position: fixed;
-  bottom: 28px;
-  right: 28px;
-  width: 60px;
-  height: 60px;
-  background: var(--wa-green);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 16px rgba(37,211,102,0.4);
-  z-index: 1000;
-  transition: all 0.3s;
-  text-decoration: none;
-}
+.wa-float { position: fixed; bottom: 28px; right: 28px; width: 60px; height: 60px; background: var(--wa-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(37,211,102,0.4); z-index: 1000; transition: all 0.3s; text-decoration: none; }
 .wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 24px rgba(37,211,102,0.5); }
 .wa-float svg { width: 30px; height: 30px; fill: #fff; }
 
-/* ===== ANIMATIONS ===== */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .nav-links { display: none; }
   .mobile-menu { display: block; }
@@ -624,22 +184,21 @@ footer p {
   .step-arrow { display: none; }
   .uc-grid { grid-template-columns: 1fr; }
   .hero { padding: 60px 0; min-height: auto; }
+  .cc-zones { grid-template-columns: 1fr; }
+  .cc-pal { grid-template-columns: repeat(9, 1fr); }
+  .cc-wrap { padding: 20px 16px; }
 }
-@media (max-width: 600px) {
-  .steps { grid-template-columns: 1fr; }
-}
+@media (max-width: 600px) { .steps { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 
-<!-- WA SVG reusable -->
 <svg style="display:none">
   <symbol id="wa-icon" viewBox="0 0 24 24">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
   </symbol>
 </svg>
 
-<!-- LANGUAGE BAR -->
 <div class="lang-bar">
   <button class="active" onclick="setLang('en')">EN</button>
   <button onclick="setLang('es')">ES</button>
@@ -647,7 +206,6 @@ footer p {
   <button onclick="setLang('fr')">FR</button>
 </div>
 
-<!-- NAVIGATION -->
 <nav>
   <div class="container">
     <a href="#" class="nav-logo">
@@ -658,6 +216,7 @@ footer p {
       <a href="#advantages" data-i18n="nav_advantages">Advantages</a>
       <a href="#how" data-i18n="nav_how">How It Works</a>
       <a href="#specs" data-i18n="nav_specs">Specs</a>
+      <a href="#colores" data-i18n="nav_colors">Colors</a>
       <a href="#usecases" data-i18n="nav_usecases">Use Cases</a>
       <a href="https://wa.me/34601180586" target="_blank" class="nav-wa">
         <svg><use href="#wa-icon"/></svg>
@@ -670,7 +229,6 @@ footer p {
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="container">
     <div class="hero-badge" data-i18n="hero_badge">The Only WPC Series Certified Court System</div>
@@ -688,12 +246,10 @@ footer p {
   </div>
 </section>
 
-<!-- WPC STRIP -->
 <div class="wpc-strip">
   <p data-i18n="wpc_strip">WPC SERIES CERTIFIED · REGISTERED · PUBLICLY LISTED · UNIQUE WORLDWIDE</p>
 </div>
 
-<!-- ADVANTAGES -->
 <section class="advantages" id="advantages">
   <div class="container">
     <div class="section-label" data-i18n="adv_label">Why CertiCourt</div>
@@ -718,40 +274,19 @@ footer p {
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
 <section class="how" id="how">
   <div class="container">
     <div class="section-label" style="color:rgba(255,255,255,0.4);" data-i18n="how_label">How It Works</div>
     <h2 class="section-title" data-i18n="how_title">FROM PALLET TO PLAY IN 4 STEPS</h2>
     <div class="steps">
-      <div class="step">
-        <div class="step-num">01</div>
-        <h3 data-i18n="step1_t">Deliver</h3>
-        <p data-i18n="step1_p">Court arrives on standard pallets. Van, trailer, or freight — your choice.</p>
-        <span class="step-arrow">→</span>
-      </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <h3 data-i18n="step2_t">Click Together</h3>
-        <p data-i18n="step2_p">Two people, no tools. The patented click system locks panels into place.</p>
-        <span class="step-arrow">→</span>
-      </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <h3 data-i18n="step3_t">Play</h3>
-        <p data-i18n="step3_p">Instantly ready. No settling, no tape, no waiting. Just pure pickleball.</p>
-        <span class="step-arrow">→</span>
-      </div>
-      <div class="step">
-        <div class="step-num">04</div>
-        <h3 data-i18n="step4_t">Take Down</h3>
-        <p data-i18n="step4_p">Disassemble, stack on pallets, store or move. Zero traces left behind.</p>
-      </div>
+      <div class="step"><div class="step-num">01</div><h3 data-i18n="step1_t">Deliver</h3><p data-i18n="step1_p">Court arrives on standard pallets. Van, trailer, or freight — your choice.</p><span class="step-arrow">→</span></div>
+      <div class="step"><div class="step-num">02</div><h3 data-i18n="step2_t">Click Together</h3><p data-i18n="step2_p">Two people, no tools. The patented click system locks panels into place.</p><span class="step-arrow">→</span></div>
+      <div class="step"><div class="step-num">03</div><h3 data-i18n="step3_t">Play</h3><p data-i18n="step3_p">Instantly ready. No settling, no tape, no waiting. Just pure pickleball.</p><span class="step-arrow">→</span></div>
+      <div class="step"><div class="step-num">04</div><h3 data-i18n="step4_t">Take Down</h3><p data-i18n="step4_p">Disassemble, stack on pallets, store or move. Zero traces left behind.</p></div>
     </div>
   </div>
 </section>
 
-<!-- SPECS -->
 <section class="specs" id="specs">
   <div class="container">
     <div class="section-label" data-i18n="specs_label">Technical Specifications</div>
@@ -770,7 +305,78 @@ footer p {
   </div>
 </section>
 
-<!-- USE CASES -->
+<!-- ===== COLOR CONFIGURATOR ===== -->
+<section class="colorizer" id="colores">
+  <div class="container">
+    <div class="section-label" data-i18n="col_label">Court Design</div>
+    <h2 class="section-title" data-i18n="col_title">CONFIGURE YOUR COURT COLORS</h2>
+    <p class="colorizer-sub" data-i18n="col_sub">Choose from the full MAPEI Mapecoat TNS palette — the professional acrylic coating used on all CERTICOURT courts.</p>
+
+    <div class="cc-wrap">
+      <div class="cc-stage" id="cc-stage"></div>
+
+      <div class="cc-zones">
+        <div class="cc-zone">
+          <div class="cc-zlabel" data-i18n="col_z0">Interior</div>
+          <div class="cc-zname" id="cc-n0"></div>
+          <div class="cc-pal" id="cc-p0"></div>
+        </div>
+        <div class="cc-zone">
+          <div class="cc-zlabel" data-i18n="col_z1">Exterior</div>
+          <div class="cc-zname" id="cc-n1"></div>
+          <div class="cc-pal" id="cc-p1"></div>
+        </div>
+        <div class="cc-zone">
+          <div class="cc-zlabel" data-i18n="col_z2">Zona de No Volea</div>
+          <div class="cc-zname" id="cc-n2"></div>
+          <div class="cc-pal" id="cc-p2"></div>
+        </div>
+      </div>
+
+      <div class="cc-viewrow">
+        <span class="cc-viewlabel" data-i18n="col_view">View:</span>
+        <div class="cc-tabs">
+          <button class="cc-tab on" id="cc-t1" onclick="ccSetView('single')" data-i18n="col_v1">1 Court</button>
+          <button class="cc-tab"    id="cc-t2" onclick="ccSetView('multi')"  data-i18n="col_v2">MultiCourt</button>
+        </div>
+        <div class="cc-countrow" id="cc-countrow">
+          <span class="cc-countlabel" data-i18n="col_courts">Courts:</span>
+          <div class="cc-cbtns">
+            <button class="cc-cbtn on" id="cc-c2" onclick="ccSetCount(2)">2</button>
+            <button class="cc-cbtn"    id="cc-c4" onclick="ccSetCount(4)">4</button>
+            <button class="cc-cbtn"    id="cc-c6" onclick="ccSetCount(6)">6</button>
+            <button class="cc-cbtn"    id="cc-c8" onclick="ccSetCount(8)">8</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cc-footer">
+        <button class="cc-btn cc-btn-outline" onclick="ccToggleSummary()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          <span data-i18n="col_summary">Ver Resumen</span>
+        </button>
+        <button class="cc-btn cc-btn-primary" onclick="ccPrint()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v8H6z"/></svg>
+          <span data-i18n="col_print">Imprimir / PDF</span>
+        </button>
+        <a href="https://wa.me/34601180586" target="_blank" class="cc-btn cc-btn-wa">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-i18n="col_wa">Solicitar este diseño</span>
+        </a>
+      </div>
+
+      <div class="cc-summary" id="cc-summary">
+        <h4 data-i18n="col_sumtitle">Configuración seleccionada — Mapecoat TNS</h4>
+        <table>
+          <thead><tr><th data-i18n="col_sum_zone">Zona</th><th data-i18n="col_sum_color">Color</th><th>TNS</th></tr></thead>
+          <tbody id="cc-sbody"></tbody>
+        </table>
+        <p class="cc-note" data-i18n="col_note">Los colores mostrados son orientativos. La selección definitiva debe realizarse con la carta de color física MAPEI.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="usecases" id="usecases">
   <div class="container">
     <div class="section-label" data-i18n="uc_label">Use Cases</div>
@@ -784,7 +390,6 @@ footer p {
   </div>
 </section>
 
-<!-- CTA -->
 <section class="cta-section">
   <div class="container">
     <h2 data-i18n="cta_title">READY TO PLAY?</h2>
@@ -796,7 +401,6 @@ footer p {
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-logo">
     <span class="certi">CERTI</span>
@@ -806,157 +410,254 @@ footer p {
   <p style="margin-top:8px;">© 2026 CERTICOURT · Pickleball Pro Courts</p>
 </footer>
 
-<!-- FLOATING WA BUTTON -->
 <a href="https://wa.me/34601180586" target="_blank" class="wa-float" aria-label="WhatsApp">
   <svg><use href="#wa-icon"/></svg>
 </a>
 
-<!-- ===== MULTILINGUAL SYSTEM ===== -->
 <script>
+// =====================================================================
+// COLORIZER — 36 MAPEI Mapecoat TNS colors
+// =====================================================================
+const CC_TNS=[
+  {id:"TNS 01",name:"Powder",       hex:"#D4C4B0"},
+  {id:"TNS 02",name:"Antique Rose", hex:"#B88880"},
+  {id:"TNS 03",name:"Rose",         hex:"#CC8090"},
+  {id:"TNS 04",name:"Lilac",        hex:"#B4AABF"},
+  {id:"TNS 05",name:"Slate Blue",   hex:"#7888A8"},
+  {id:"TNS 06",name:"Dark Slate",   hex:"#4A5468"},
+  {id:"TNS 07",name:"Light Grey",   hex:"#A8AAA8"},
+  {id:"TNS 08",name:"Grey",         hex:"#7A7C7A"},
+  {id:"TNS 09",name:"Black",        hex:"#2A2C2A"},
+  {id:"TNS 10",name:"Yellow",       hex:"#D4B820"},
+  {id:"TNS 11",name:"Warm Yellow",  hex:"#C8A018"},
+  {id:"TNS 12",name:"Amber",        hex:"#C08818"},
+  {id:"TNS 13",name:"Sand",         hex:"#B89A60"},
+  {id:"TNS 14",name:"Beige Brown",  hex:"#A08050"},
+  {id:"TNS 15",name:"Brown",        hex:"#906840"},
+  {id:"TNS 16",name:"Sienna",       hex:"#A85828"},
+  {id:"TNS 17",name:"Brick Red",    hex:"#983020"},
+  {id:"TNS 18",name:"Dark Red",     hex:"#882018"},
+  {id:"TNS 19",name:"Apple Green",  hex:"#90CC90"},
+  {id:"TNS 20",name:"Darek Green",  hex:"#3A6030"},
+  {id:"TNS 21",name:"Forest Green", hex:"#284820"},
+  {id:"TNS 22",name:"Mint",         hex:"#70C098"},
+  {id:"TNS 23",name:"Teal",         hex:"#409878"},
+  {id:"TNS 24",name:"Olive",        hex:"#788040"},
+  {id:"TNS 25",name:"Sky Blue",     hex:"#5898C8"},
+  {id:"TNS 26",name:"Medium Blue",  hex:"#3A78B8"},
+  {id:"TNS 27",name:"Royal Blue",   hex:"#2258A0"},
+  {id:"TNS 28",name:"Light Blue",   hex:"#90C0DC"},
+  {id:"TNS 29",name:"Powder Blue",  hex:"#B8D4EC"},
+  {id:"TNS 30",name:"London Green", hex:"#4A6838"},
+  {id:"TNS 31",name:"Cobalt",       hex:"#1848A0"},
+  {id:"TNS 32",name:"Dark Teal",    hex:"#186878"},
+  {id:"TNS 33",name:"Deep Teal",    hex:"#105060"},
+  {id:"TNS 34",name:"Navy",         hex:"#103070"},
+  {id:"TNS 35",name:"Dark Navy",    hex:"#0C2460"},
+  {id:"TNS 36",name:"Midnight",     hex:"#0A1848"},
+];
+
+let ccSel=[
+  CC_TNS.find(c=>c.id==="TNS 20"),
+  CC_TNS.find(c=>c.id==="TNS 30"),
+  CC_TNS.find(c=>c.id==="TNS 19"),
+];
+let ccView='single', ccCount=2;
+
+// Single court SVG — IFP dimensions: 44ft × 20ft, NVZ=7ft, net at 22ft
+function ccSingleSVG(x0,y0,cw,ch,ci,ce,ck,sw){
+  const x1=x0+cw,y1=y0+ch,midY=y0+ch/2;
+  const xKL=Math.round(x0+cw*15/44);
+  const xNet=Math.round(x0+cw/2);
+  const xKR=Math.round(x0+cw*29/44);
+  sw=sw||2.5;
+  return `
+    <rect x="${x0}"   y="${y0}" width="${xKL-x0}"   height="${ch}" fill="${ci}"/>
+    <rect x="${xKL}"  y="${y0}" width="${xNet-xKL}"  height="${ch}" fill="${ck}"/>
+    <rect x="${xNet}" y="${y0}" width="${xKR-xNet}"  height="${ch}" fill="${ck}"/>
+    <rect x="${xKR}"  y="${y0}" width="${x1-xKR}"    height="${ch}" fill="${ci}"/>
+    <rect x="${x0}" y="${y0}" width="${cw}" height="${ch}" fill="none" stroke="white" stroke-width="${sw}"/>
+    <line x1="${xKL}"  y1="${y0}" x2="${xKL}"  y2="${y1}" stroke="white" stroke-width="${sw*.85}"/>
+    <line x1="${xKR}"  y1="${y0}" x2="${xKR}"  y2="${y1}" stroke="white" stroke-width="${sw*.85}"/>
+    <line x1="${x0}"   y1="${midY}" x2="${xKL}" y2="${midY}" stroke="white" stroke-width="${sw*.85}"/>
+    <line x1="${xKR}"  y1="${midY}" x2="${x1}"  y2="${midY}" stroke="white" stroke-width="${sw*.85}"/>
+    <line x1="${xNet}" y1="${y0}" x2="${xNet}" y2="${y1}" stroke="white" stroke-width="${sw}" stroke-dasharray="${sw*5},${sw*3.5}"/>
+    <circle cx="${xNet}" cy="${y0}" r="${sw*2.5}" fill="white"/>
+    <circle cx="${xNet}" cy="${y1}" r="${sw*2.5}" fill="white"/>`;
+}
+
+function ccRenderSingle(){
+  const ci=ccSel[0].hex,ce=ccSel[1].hex,ck=ccSel[2].hex;
+  return `<svg viewBox="0 0 1000 580" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1000" height="580" fill="${ce}" rx="10"/>
+    ${ccSingleSVG(100,75,800,430,ci,ce,ck,3)}
+  </svg>`;
+}
+
+function ccRenderMulti(n){
+  const ci=ccSel[0].hex,ce=ccSel[1].hex,ck=ccSel[2].hex;
+  const cols=2,rows=n/2,W=1000,om=50,cg=20,rg=28;
+  const cw=Math.floor((W-om*2-cg*(cols-1))/cols);
+  const ch=Math.round(cw*20/44);
+  const H=om*2+rows*ch+(rows-1)*rg+20;
+  let courts='',labels='';
+  for(let r=0;r<rows;r++){
+    for(let c=0;c<cols;c++){
+      const x=om+c*(cw+cg),y=om+r*(ch+rg);
+      courts+=ccSingleSVG(x,y,cw,ch,ci,ce,ck,1.8);
+      labels+=`<text x="${x+cw/2}" y="${y+ch+16}" text-anchor="middle" fill="white" font-size="11" font-family="Barlow Condensed,sans-serif" font-weight="700" letter-spacing="2" opacity="0.6">COURT ${r*cols+c+1}</text>`;
+    }
+  }
+  return `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+    <rect width="${W}" height="${H}" fill="${ce}" rx="10"/>
+    <rect x="8" y="8" width="${W-16}" height="${H-16}" fill="none" stroke="white" stroke-width="1" stroke-opacity="0.2" rx="8"/>
+    ${courts}${labels}
+  </svg>`;
+}
+
+function ccRender(){
+  document.getElementById('cc-stage').innerHTML=
+    ccView==='single' ? ccRenderSingle() : ccRenderMulti(ccCount);
+}
+
+function ccSetView(v){
+  ccView=v;
+  document.getElementById('cc-t1').className='cc-tab'+(v==='single'?' on':'');
+  document.getElementById('cc-t2').className='cc-tab'+(v==='multi'?' on':'');
+  document.getElementById('cc-countrow').className='cc-countrow'+(v==='multi'?' visible':'');
+  ccRender();
+}
+
+function ccSetCount(n){
+  ccCount=n;
+  [2,4,6,8].forEach(x=>document.getElementById('cc-c'+x).className='cc-cbtn'+(x===n?' on':''));
+  ccRender();
+}
+
+function ccBuildPal(z){
+  const el=document.getElementById('cc-p'+z);
+  el.innerHTML='';
+  CC_TNS.forEach(c=>{
+    const d=document.createElement('div');
+    d.className='cc-dot'+(ccSel[z].id===c.id?' on':'');
+    d.style.background=c.hex;
+    d.title=c.name+' ('+c.id+')';
+    d.onclick=()=>{ ccSel[z]=c; document.getElementById('cc-n'+z).textContent=c.name+' | '+c.id; ccBuildPal(z); ccRender(); ccUpdateSummary(); };
+    el.appendChild(d);
+  });
+  document.getElementById('cc-n'+z).textContent=ccSel[z].name+' | '+ccSel[z].id;
+}
+
+const CC_ZL=['Interior (campo de juego)','Exterior (zona perimetral)','Zona de No Volea (kitchen)'];
+function ccUpdateSummary(){
+  document.getElementById('cc-sbody').innerHTML=CC_ZL.map((lbl,i)=>`
+    <tr><td>${lbl}</td><td><span class="cc-sw" style="background:${ccSel[i].hex}"></span>${ccSel[i].name}</td><td class="cc-tns">${ccSel[i].id}</td></tr>`).join('');
+}
+function ccToggleSummary(){
+  const s=document.getElementById('cc-summary');
+  ccUpdateSummary();
+  s.style.display=s.style.display==='block'?'none':'block';
+}
+function ccPrint(){
+  ccUpdateSummary();
+  document.getElementById('cc-summary').style.display='block';
+  setTimeout(()=>window.print(),120);
+}
+
+[0,1,2].forEach(ccBuildPal);
+ccRender();
+
+// =====================================================================
+// MULTILINGUAL SYSTEM
+// =====================================================================
 const translations = {
   en: {
-    nav_advantages: "Advantages", nav_how: "How It Works", nav_specs: "Specs", nav_usecases: "Use Cases", nav_contact: "Contact",
-    hero_badge: "The Only WPC Series Certified Court System",
-    hero_text: "The world's only WPC Series certified modular pickleball court system. Real outdoor-court bounce, tool-free assembly by just two people, and every court registered and publicly listed. No tape. No waiting. No compromise.",
-    hero_cta: "Request a Quote",
-    wpc_strip: "WPC SERIES CERTIFIED · REGISTERED · PUBLICLY LISTED · UNIQUE WORLDWIDE",
-    adv_label: "Why CertiCourt", adv_title: "15 REASONS TO CHOOSE CERTICOURT",
-    adv1_t: "WPC Series Certified", adv1_p: "The only court system in the world with official WPC Series certification. Not copyable. Tournament standard guaranteed.",
-    adv2_t: "Registered & Public", adv2_p: "Every court gets a unique ID and is listed in the WPC Series database. Full transparency for buyers, players, and rental customers.",
-    adv3_t: "True Outdoor Bounce", adv3_p: "Real outdoor-court bounce thanks to our wood-based system. No carpet feel, no dead zones — pure pickleball.",
-    adv4_t: "Quick Setup", adv4_p: "Two people, no tools. Our patented click system enables fast assembly without any professional installation crew.",
-    adv5_t: "Any Flat Surface", adv5_p: "Concrete, asphalt, sports hall floor — CertiCourt works on any flat surface, indoor or outdoor. Maximum flexibility.",
-    adv6_t: "Pallet Transport", adv6_p: "Ships on standard pallets. Fits in a van or trailer. No heavy transport, no crane, no special vehicles needed.",
-    adv7_t: "Custom Branding", adv7_p: "Your logo, your colors, your sponsors. Each court can be fully customized to match your brand identity.",
-    adv8_t: "Reusable & Durable", adv8_p: "Built for hundreds of setups and takedowns. Buy once, use for years — whether fixed or mobile.",
-    adv9_t: "Rental Ready", adv9_p: "Uniform standard across all courts. Clients always know what they get. Perfect for rental business models.",
-    adv10_t: "100% Pickleball", adv10_p: "Not multi-sport. Every detail is optimized exclusively for pickleball. No compromise for other sports.",
-    adv11_t: "Instantly Playable", adv11_p: "No settling time needed. Unlike vinyl roll-outs that need hours to flatten, CertiCourt is game-ready immediately after setup.",
-    adv12_t: "Perfect Bounce — Always", adv12_p: "Consistent, reproducible bounce regardless of temperature, surface, or number of setups. Same court, same bounce — every time.",
-    adv13_t: "Zero Traces", adv13_p: "No tape, no adhesive residue, no floor marks. Set up and take down without leaving a single trace. Essential for premium venues.",
-    adv14_t: "Tennis Hall Summer Use", adv14_p: "Turn empty summer tennis halls into pickleball arenas. Additional revenue without permanent modifications. Remove in fall.",
-    adv15_t: "Pop-Up & Showmatches", adv15_p: "Shopping malls, corporate events, trade shows, festivals — bring professional pickleball anywhere people gather.",
-    how_label: "How It Works", how_title: "FROM PALLET TO PLAY IN 4 STEPS",
-    step1_t: "Deliver", step1_p: "Court arrives on standard pallets. Van, trailer, or freight — your choice.",
-    step2_t: "Click Together", step2_p: "Two people, no tools. The patented click system locks panels into place.",
-    step3_t: "Play", step3_p: "Instantly ready. No settling, no tape, no waiting. Just pure pickleball.",
-    step4_t: "Take Down", step4_p: "Disassemble, stack on pallets, store or move. Zero traces left behind.",
-    specs_label: "Technical Specifications", specs_title: "COURT SPECIFICATIONS",
-    spec1_l: "Court Area", spec2_l: "Material", spec2_v: "Engineered Wood Panel System", spec3_l: "Assembly", spec3_v: "Tool-free click system, min. 2 people", spec4_l: "Surface", spec4_v: "Any flat surface (concrete, asphalt, gym floor)", spec5_l: "Transport", spec5_v: "Standard pallets (van/trailer compatible)", spec6_l: "Bounce", spec6_v: "True outdoor-court bounce", spec7_l: "Certification", spec7_v: "WPC Series Certified — registered & publicly listed", spec8_l: "Branding", spec8_v: "Custom logos & colors available", spec9_l: "Sport", spec9_v: "Pickleball only — 100% optimized",
-    uc_label: "Use Cases", uc_title: "WHERE CERTICOURT PLAYS",
-    uc1_t: "Tournaments & Events", uc1_p: "Official WPC Series tournament court. Quick setup for changing venues — from sports halls to open-air arenas. Every court registered for uniform player experience.",
-    uc2_t: "Tennis Clubs & Sports Clubs", uc2_p: "Add pickleball without permanent construction. Test the market seasonally. Store the court when not needed. Perfect for summer tennis hall conversion.",
-    uc3_t: "Rental & Commercial", uc3_p: "WPC Series registration guarantees uniform quality. Event organizers, hotels, municipalities can rent certified courts — same standard, every time.",
-    uc4_t: "Pop-Up & Corporate", uc4_p: "Shopping malls, company events, trade shows, team building, product launches. Professional pickleball wherever people gather — zero traces after takedown.",
-    cta_title: "READY TO PLAY?", cta_text: "Get in touch via WhatsApp for a quote or more information.", cta_button: "Chat on WhatsApp"
+    nav_advantages:"Advantages",nav_how:"How It Works",nav_specs:"Specs",nav_colors:"Colors",nav_usecases:"Use Cases",nav_contact:"Contact",
+    hero_badge:"The Only WPC Series Certified Court System",
+    hero_text:"The world's only WPC Series certified modular pickleball court system. Real outdoor-court bounce, tool-free assembly by just two people, and every court registered and publicly listed. No tape. No waiting. No compromise.",
+    hero_cta:"Request a Quote",
+    wpc_strip:"WPC SERIES CERTIFIED · REGISTERED · PUBLICLY LISTED · UNIQUE WORLDWIDE",
+    adv_label:"Why CertiCourt",adv_title:"15 REASONS TO CHOOSE CERTICOURT",
+    adv1_t:"WPC Series Certified",adv1_p:"The only court system in the world with official WPC Series certification. Not copyable. Tournament standard guaranteed.",
+    adv2_t:"Registered & Public",adv2_p:"Every court gets a unique ID and is listed in the WPC Series database. Full transparency for buyers, players, and rental customers.",
+    adv3_t:"True Outdoor Bounce",adv3_p:"Real outdoor-court bounce thanks to our wood-based system. No carpet feel, no dead zones — pure pickleball.",
+    adv4_t:"Quick Setup",adv4_p:"Two people, no tools. Our patented click system enables fast assembly without any professional installation crew.",
+    adv5_t:"Any Flat Surface",adv5_p:"Concrete, asphalt, sports hall floor — CertiCourt works on any flat surface, indoor or outdoor. Maximum flexibility.",
+    adv6_t:"Pallet Transport",adv6_p:"Ships on standard pallets. Fits in a van or trailer. No heavy transport, no crane, no special vehicles needed.",
+    adv7_t:"Custom Branding",adv7_p:"Your logo, your colors, your sponsors. Each court can be fully customized to match your brand identity.",
+    adv8_t:"Reusable & Durable",adv8_p:"Built for hundreds of setups and takedowns. Buy once, use for years — whether fixed or mobile.",
+    adv9_t:"Rental Ready",adv9_p:"Uniform standard across all courts. Clients always know what they get. Perfect for rental business models.",
+    adv10_t:"100% Pickleball",adv10_p:"Not multi-sport. Every detail is optimized exclusively for pickleball. No compromise for other sports.",
+    adv11_t:"Instantly Playable",adv11_p:"No settling time needed. Unlike vinyl roll-outs that need hours to flatten, CertiCourt is game-ready immediately after setup.",
+    adv12_t:"Perfect Bounce — Always",adv12_p:"Consistent, reproducible bounce regardless of temperature, surface, or number of setups. Same court, same bounce — every time.",
+    adv13_t:"Zero Traces",adv13_p:"No tape, no adhesive residue, no floor marks. Set up and take down without leaving a single trace. Essential for premium venues.",
+    adv14_t:"Tennis Hall Summer Use",adv14_p:"Turn empty summer tennis halls into pickleball arenas. Additional revenue without permanent modifications. Remove in fall.",
+    adv15_t:"Pop-Up & Showmatches",adv15_p:"Shopping malls, corporate events, trade shows, festivals — bring professional pickleball anywhere people gather.",
+    how_label:"How It Works",how_title:"FROM PALLET TO PLAY IN 4 STEPS",
+    step1_t:"Deliver",step1_p:"Court arrives on standard pallets. Van, trailer, or freight — your choice.",
+    step2_t:"Click Together",step2_p:"Two people, no tools. The patented click system locks panels into place.",
+    step3_t:"Play",step3_p:"Instantly ready. No settling, no tape, no waiting. Just pure pickleball.",
+    step4_t:"Take Down",step4_p:"Disassemble, stack on pallets, store or move. Zero traces left behind.",
+    specs_label:"Technical Specifications",specs_title:"COURT SPECIFICATIONS",
+    spec1_l:"Court Area",spec2_l:"Material",spec2_v:"Engineered Wood Panel System",spec3_l:"Assembly",spec3_v:"Tool-free click system, min. 2 people",spec4_l:"Surface",spec4_v:"Any flat surface (concrete, asphalt, gym floor)",spec5_l:"Transport",spec5_v:"Standard pallets (van/trailer compatible)",spec6_l:"Bounce",spec6_v:"True outdoor-court bounce",spec7_l:"Certification",spec7_v:"WPC Series Certified — registered & publicly listed",spec8_l:"Branding",spec8_v:"Custom logos & colors available",spec9_l:"Sport",spec9_v:"Pickleball only — 100% optimized",
+    col_label:"Court Design",col_title:"CONFIGURE YOUR COURT COLORS",col_sub:"Choose from the full MAPEI Mapecoat TNS palette — the professional acrylic coating used on all CERTICOURT courts.",
+    col_z0:"Interior",col_z1:"Exterior",col_z2:"Zona de No Volea",col_view:"View:",col_v1:"1 Court",col_v2:"MultiCourt",col_courts:"Courts:",
+    col_summary:"Summary",col_print:"Print / PDF",col_wa:"Request this design",
+    col_sumtitle:"Selected Configuration — Mapecoat TNS",col_sum_zone:"Zone",col_sum_color:"Color",col_note:"Colors shown are indicative. Final selection must be made using the MAPEI physical color chart.",
+    uc_label:"Use Cases",uc_title:"WHERE CERTICOURT PLAYS",
+    uc1_t:"Tournaments & Events",uc1_p:"Official WPC Series tournament court. Quick setup for changing venues — from sports halls to open-air arenas. Every court registered for uniform player experience.",
+    uc2_t:"Tennis Clubs & Sports Clubs",uc2_p:"Add pickleball without permanent construction. Test the market seasonally. Store the court when not needed. Perfect for summer tennis hall conversion.",
+    uc3_t:"Rental & Commercial",uc3_p:"WPC Series registration guarantees uniform quality. Event organizers, hotels, municipalities can rent certified courts — same standard, every time.",
+    uc4_t:"Pop-Up & Corporate",uc4_p:"Shopping malls, company events, trade shows, team building, product launches. Professional pickleball wherever people gather — zero traces after takedown.",
+    cta_title:"READY TO PLAY?",cta_text:"Get in touch via WhatsApp for a quote or more information.",cta_button:"Chat on WhatsApp"
   },
   es: {
-    nav_advantages: "Ventajas", nav_how: "Cómo Funciona", nav_specs: "Especificaciones", nav_usecases: "Usos", nav_contact: "Contacto",
-    hero_badge: "El Único Sistema de Courts Certificado por la WPC Series",
-    hero_text: "El único sistema modular de courts de pickleball certificado por la WPC Series en el mundo. Bounce real de pista exterior, montaje sin herramientas por solo dos personas, y cada court registrado y listado públicamente. Sin cinta adhesiva. Sin esperas. Sin compromisos.",
-    hero_cta: "Solicitar Presupuesto",
-    wpc_strip: "CERTIFICADO WPC SERIES · REGISTRADO · LISTADO PÚBLICO · ÚNICO EN EL MUNDO",
-    adv_label: "Por Qué CertiCourt", adv_title: "15 RAZONES PARA ELEGIR CERTICOURT",
-    adv1_t: "Certificado WPC Series", adv1_p: "El único sistema de courts en el mundo con certificación oficial WPC Series. No se puede copiar. Estándar de torneo garantizado.",
-    adv2_t: "Registrado y Público", adv2_p: "Cada court recibe un ID único y se lista en la base de datos WPC Series. Transparencia total para compradores, jugadores y clientes de alquiler.",
-    adv3_t: "Bounce Real de Exterior", adv3_p: "Bounce real de pista exterior gracias a nuestro sistema de madera. Sin sensación de alfombra, sin zonas muertas — pickleball puro.",
-    adv4_t: "Montaje Rápido", adv4_p: "Dos personas, sin herramientas. Nuestro sistema de clic patentado permite un montaje rápido sin equipo profesional.",
-    adv5_t: "Cualquier Superficie Plana", adv5_p: "Hormigón, asfalto, pabellón — CertiCourt funciona en cualquier superficie plana, interior o exterior. Máxima flexibilidad.",
-    adv6_t: "Transporte en Palés", adv6_p: "Se envía en palés estándar. Cabe en una furgoneta o remolque. Sin transporte pesado, sin grúa, sin vehículos especiales.",
-    adv7_t: "Branding Personalizado", adv7_p: "Tu logo, tus colores, tus patrocinadores. Cada court se puede personalizar completamente según tu identidad de marca.",
-    adv8_t: "Reutilizable y Duradero", adv8_p: "Diseñado para cientos de montajes y desmontajes. Compra una vez, usa durante años — fijo o móvil.",
-    adv9_t: "Listo para Alquiler", adv9_p: "Estándar uniforme en todos los courts. Los clientes siempre saben lo que reciben. Perfecto para modelos de alquiler.",
-    adv10_t: "100% Pickleball", adv10_p: "No es multi-deporte. Cada detalle está optimizado exclusivamente para pickleball. Sin compromisos con otros deportes.",
-    adv11_t: "Listo al Instante", adv11_p: "Sin tiempo de asentamiento. A diferencia de los roll-outs de vinilo que necesitan horas, CertiCourt está listo inmediatamente tras el montaje.",
-    adv12_t: "Bounce Perfecto — Siempre", adv12_p: "Bounce consistente y reproducible independientemente de la temperatura, superficie o número de montajes. Mismo court, mismo bounce.",
-    adv13_t: "Cero Marcas", adv13_p: "Sin cinta, sin residuos adhesivos, sin marcas en el suelo. Monta y desmonta sin dejar rastro. Esencial para venues premium.",
-    adv14_t: "Pistas de Tenis en Verano", adv14_p: "Convierte pistas de tenis cubiertas vacías en verano en arenas de pickleball. Ingresos adicionales sin modificaciones permanentes.",
-    adv15_t: "Pop-Up y Exhibiciones", adv15_p: "Centros comerciales, eventos corporativos, ferias, festivales — pickleball profesional donde se reúne la gente.",
-    how_label: "Cómo Funciona", how_title: "DE PALÉ A JUEGO EN 4 PASOS",
-    step1_t: "Entregar", step1_p: "El court llega en palés estándar. Furgoneta, remolque o transporte — tú eliges.",
-    step2_t: "Ensamblar", step2_p: "Dos personas, sin herramientas. El sistema de clic patentado fija los paneles en su lugar.",
-    step3_t: "Jugar", step3_p: "Listo al instante. Sin asentamiento, sin cinta, sin esperas. Solo pickleball puro.",
-    step4_t: "Desmontar", step4_p: "Desensambla, apila en palés, almacena o transporta. Cero marcas.",
-    specs_label: "Especificaciones Técnicas", specs_title: "ESPECIFICACIONES DEL COURT",
-    spec1_l: "Superficie", spec2_l: "Material", spec2_v: "Sistema de paneles de madera técnica", spec3_l: "Montaje", spec3_v: "Sistema de clic sin herramientas, mín. 2 personas", spec4_l: "Suelo", spec4_v: "Cualquier superficie plana (hormigón, asfalto, pabellón)", spec5_l: "Transporte", spec5_v: "Palés estándar (compatible con furgoneta/remolque)", spec6_l: "Bounce", spec6_v: "Bounce real de pista exterior", spec7_l: "Certificación", spec7_v: "Certificado WPC Series — registrado y listado públicamente", spec8_l: "Branding", spec8_v: "Logos y colores personalizados disponibles", spec9_l: "Deporte", spec9_v: "Solo pickleball — 100% optimizado",
-    uc_label: "Usos", uc_title: "DÓNDE JUEGA CERTICOURT",
-    uc1_t: "Torneos y Eventos", uc1_p: "Court oficial de torneos WPC Series. Montaje rápido para venues cambiantes — desde pabellones hasta arenas al aire libre. Cada court registrado.",
-    uc2_t: "Clubs de Tenis y Deportivos", uc2_p: "Añade pickleball sin obras permanentes. Prueba el mercado por temporadas. Guarda el court cuando no lo necesites. Ideal para pistas cubiertas en verano.",
-    uc3_t: "Alquiler y Comercial", uc3_p: "El registro WPC Series garantiza calidad uniforme. Organizadores de eventos, hoteles y municipios pueden alquilar courts certificados.",
-    uc4_t: "Pop-Up y Corporativo", uc4_p: "Centros comerciales, eventos de empresa, ferias, team building, lanzamientos. Pickleball profesional donde se reúne la gente.",
-    cta_title: "¿LISTO PARA JUGAR?", cta_text: "Contáctanos por WhatsApp para un presupuesto o más información.", cta_button: "Chatear por WhatsApp"
+    nav_advantages:"Ventajas",nav_how:"Cómo Funciona",nav_specs:"Especificaciones",nav_colors:"Colores",nav_usecases:"Usos",nav_contact:"Contacto",
+    hero_badge:"El Único Sistema de Courts Certificado por la WPC Series",
+    hero_text:"El único sistema modular de courts de pickleball certificado por la WPC Series en el mundo. Bounce real de pista exterior, montaje sin herramientas por solo dos personas, y cada court registrado y listado públicamente.",
+    hero_cta:"Solicitar Presupuesto",wpc_strip:"CERTIFICADO WPC SERIES · REGISTRADO · LISTADO PÚBLICO · ÚNICO EN EL MUNDO",
+    adv_label:"Por Qué CertiCourt",adv_title:"15 RAZONES PARA ELEGIR CERTICOURT",
+    adv1_t:"Certificado WPC Series",adv1_p:"El único sistema de courts en el mundo con certificación oficial WPC Series.",adv2_t:"Registrado y Público",adv2_p:"Cada court recibe un ID único y se lista en la base de datos WPC Series.",adv3_t:"Bounce Real de Exterior",adv3_p:"Bounce real de pista exterior gracias a nuestro sistema de madera.",adv4_t:"Montaje Rápido",adv4_p:"Dos personas, sin herramientas. Nuestro sistema de clic patentado.",adv5_t:"Cualquier Superficie Plana",adv5_p:"Hormigón, asfalto, pabellón — CertiCourt funciona en cualquier superficie plana.",adv6_t:"Transporte en Palés",adv6_p:"Se envía en palés estándar. Cabe en una furgoneta o remolque.",adv7_t:"Branding Personalizado",adv7_p:"Tu logo, tus colores, tus patrocinadores.",adv8_t:"Reutilizable y Duradero",adv8_p:"Diseñado para cientos de montajes y desmontajes.",adv9_t:"Listo para Alquiler",adv9_p:"Estándar uniforme en todos los courts.",adv10_t:"100% Pickleball",adv10_p:"No es multi-deporte. Cada detalle está optimizado exclusivamente para pickleball.",adv11_t:"Listo al Instante",adv11_p:"Sin tiempo de asentamiento. Listo inmediatamente tras el montaje.",adv12_t:"Bounce Perfecto — Siempre",adv12_p:"Bounce consistente y reproducible independientemente de la temperatura.",adv13_t:"Cero Marcas",adv13_p:"Sin cinta, sin residuos adhesivos, sin marcas en el suelo.",adv14_t:"Pistas de Tenis en Verano",adv14_p:"Convierte pistas de tenis cubiertas vacías en arenas de pickleball.",adv15_t:"Pop-Up y Exhibiciones",adv15_p:"Centros comerciales, eventos corporativos, ferias, festivales.",
+    how_label:"Cómo Funciona",how_title:"DE PALÉ A JUEGO EN 4 PASOS",step1_t:"Entregar",step1_p:"El court llega en palés estándar.",step2_t:"Ensamblar",step2_p:"Dos personas, sin herramientas.",step3_t:"Jugar",step3_p:"Listo al instante. Sin esperas.",step4_t:"Desmontar",step4_p:"Desensambla, apila en palés. Cero marcas.",
+    specs_label:"Especificaciones Técnicas",specs_title:"ESPECIFICACIONES DEL COURT",spec1_l:"Superficie",spec2_l:"Material",spec2_v:"Sistema de paneles de madera técnica",spec3_l:"Montaje",spec3_v:"Sistema de clic sin herramientas, mín. 2 personas",spec4_l:"Suelo",spec4_v:"Cualquier superficie plana",spec5_l:"Transporte",spec5_v:"Palés estándar",spec6_l:"Bounce",spec6_v:"Bounce real de pista exterior",spec7_l:"Certificación",spec7_v:"Certificado WPC Series — registrado y listado públicamente",spec8_l:"Branding",spec8_v:"Logos y colores personalizados disponibles",spec9_l:"Deporte",spec9_v:"Solo pickleball — 100% optimizado",
+    col_label:"Diseño de Pista",col_title:"CONFIGURA LOS COLORES DE TU PISTA",col_sub:"Elige de la paleta completa MAPEI Mapecoat TNS — el recubrimiento acrílico profesional usado en todos los courts CERTICOURT.",
+    col_z0:"Interior",col_z1:"Exterior",col_z2:"Zona de No Volea",col_view:"Vista:",col_v1:"1 Pista",col_v2:"MultiCourt",col_courts:"Pistas:",
+    col_summary:"Ver Resumen",col_print:"Imprimir / PDF",col_wa:"Solicitar este diseño",
+    col_sumtitle:"Configuración seleccionada — Mapecoat TNS",col_sum_zone:"Zona",col_sum_color:"Color",col_note:"Los colores mostrados son orientativos. La selección definitiva debe realizarse con la carta de color física MAPEI.",
+    uc_label:"Usos",uc_title:"DÓNDE JUEGA CERTICOURT",uc1_t:"Torneos y Eventos",uc1_p:"Court oficial de torneos WPC Series.",uc2_t:"Clubs de Tenis y Deportivos",uc2_p:"Añade pickleball sin obras permanentes.",uc3_t:"Alquiler y Comercial",uc3_p:"El registro WPC Series garantiza calidad uniforme.",uc4_t:"Pop-Up y Corporativo",uc4_p:"Centros comerciales, eventos de empresa, ferias.",
+    cta_title:"¿LISTO PARA JUGAR?",cta_text:"Contáctanos por WhatsApp para un presupuesto.",cta_button:"Chatear por WhatsApp"
   },
   de: {
-    nav_advantages: "Vorteile", nav_how: "So funktioniert's", nav_specs: "Spezifikationen", nav_usecases: "Einsatzbereiche", nav_contact: "Kontakt",
-    hero_badge: "Das einzige WPC Series zertifizierte Court-System",
-    hero_text: "Das weltweit einzige WPC Series zertifizierte modulare Pickleball-Court-System. Echter Outdoor-Court-Bounce, werkzeugfreier Aufbau durch nur zwei Personen, und jeder Court registriert und öffentlich gelistet. Kein Klebeband. Keine Wartezeit. Kein Kompromiss.",
-    hero_cta: "Angebot Anfragen",
-    wpc_strip: "WPC SERIES ZERTIFIZIERT · REGISTRIERT · ÖFFENTLICH GELISTET · WELTWEIT EINZIGARTIG",
-    adv_label: "Warum CertiCourt", adv_title: "15 GRÜNDE FÜR CERTICOURT",
-    adv1_t: "WPC Series Zertifiziert", adv1_p: "Das einzige Court-System der Welt mit offizieller WPC Series Zertifizierung. Nicht kopierbar. Turnierstandard garantiert.",
-    adv2_t: "Registriert & Öffentlich", adv2_p: "Jeder Court erhält eine eindeutige ID und wird in der WPC Series Datenbank gelistet. Volle Transparenz für Käufer, Spieler und Verleih-Kunden.",
-    adv3_t: "Echter Outdoor-Bounce", adv3_p: "Echter Outdoor-Court-Bounce dank unseres Holzsystems. Kein Teppichgefühl, keine Dead Zones — pures Pickleball.",
-    adv4_t: "Schneller Aufbau", adv4_p: "Zwei Personen, kein Werkzeug. Unser patentiertes Stecksystem ermöglicht schnellen Aufbau ohne Profi-Team.",
-    adv5_t: "Jeder flache Boden", adv5_p: "Beton, Asphalt, Hallenboden — CertiCourt funktioniert auf jedem flachen Untergrund, drinnen oder draußen.",
-    adv6_t: "Paletten-Transport", adv6_p: "Versand auf Standardpaletten. Passt in Sprinter oder Anhänger. Kein Schwerlasttransport, kein Kran nötig.",
-    adv7_t: "Individuelles Branding", adv7_p: "Ihr Logo, Ihre Farben, Ihre Sponsoren. Jeder Court kann vollständig individualisiert werden.",
-    adv8_t: "Wiederverwendbar & Langlebig", adv8_p: "Konzipiert für hunderte Auf- und Abbauten. Einmal kaufen, jahrelang nutzen — fest oder mobil.",
-    adv9_t: "Verleih-Ready", adv9_p: "Einheitlicher Standard über alle Courts. Kunden wissen immer, was sie bekommen. Perfekt für Verleihmodelle.",
-    adv10_t: "100% Pickleball", adv10_p: "Kein Multi-Sport. Jedes Detail ist ausschließlich für Pickleball optimiert. Kein Kompromiss.",
-    adv11_t: "Sofort Spielbereit", adv11_p: "Keine Setzzeit nötig. Anders als Vinyl-Roll-Outs, die Stunden zum Glätten brauchen, ist CertiCourt sofort nach dem Aufbau spielbereit.",
-    adv12_t: "Perfekter Bounce — Immer", adv12_p: "Konstanter, reproduzierbarer Bounce unabhängig von Temperatur, Untergrund oder Anzahl der Aufbauten.",
-    adv13_t: "Keine Spuren", adv13_p: "Kein Klebeband, keine Klebereste, keine Abdrücke. Aufbauen und abbauen ohne eine einzige Spur. Essentiell für Premium-Venues.",
-    adv14_t: "Tennishallen im Sommer", adv14_p: "Leerstehende Tennishallen im Sommer in Pickleball-Arenen verwandeln. Zusätzliche Einnahmen ohne permanente Umbauten.",
-    adv15_t: "Pop-Up & Showmatches", adv15_p: "Shopping Malls, Firmenevents, Messen, Festivals — professionelles Pickleball überall wo Menschen zusammenkommen.",
-    how_label: "So funktioniert's", how_title: "VON DER PALETTE ZUM SPIEL IN 4 SCHRITTEN",
-    step1_t: "Liefern", step1_p: "Court kommt auf Standardpaletten. Sprinter, Anhänger oder Spedition — Ihre Wahl.",
-    step2_t: "Zusammenstecken", step2_p: "Zwei Personen, kein Werkzeug. Das patentierte Stecksystem fixiert die Panels.",
-    step3_t: "Spielen", step3_p: "Sofort spielbereit. Kein Setzen, kein Klebeband, kein Warten. Einfach Pickleball.",
-    step4_t: "Abbauen", step4_p: "Auseinandernehmen, auf Paletten stapeln, lagern oder transportieren. Null Spuren.",
-    specs_label: "Technische Daten", specs_title: "COURT-SPEZIFIKATIONEN",
-    spec1_l: "Fläche", spec2_l: "Material", spec2_v: "Technisches Holz-Panel-System", spec3_l: "Aufbau", spec3_v: "Werkzeugfreies Stecksystem, min. 2 Personen", spec4_l: "Untergrund", spec4_v: "Jeder flache Boden (Beton, Asphalt, Hallenboden)", spec5_l: "Transport", spec5_v: "Standardpaletten (Sprinter/Anhänger-kompatibel)", spec6_l: "Bounce", spec6_v: "Echter Outdoor-Court-Bounce", spec7_l: "Zertifizierung", spec7_v: "WPC Series zertifiziert — registriert & öffentlich gelistet", spec8_l: "Branding", spec8_v: "Individuelle Logos & Farben möglich", spec9_l: "Sportart", spec9_v: "Nur Pickleball — 100% optimiert",
-    uc_label: "Einsatzbereiche", uc_title: "WO CERTICOURT SPIELT",
-    uc1_t: "Turniere & Events", uc1_p: "Offizieller WPC Series Turnier-Court. Schneller Auf-/Abbau für wechselnde Venues — von Sporthallen bis Open-Air-Arenen.",
-    uc2_t: "Tennis- & Sportvereine", uc2_p: "Pickleball anbieten ohne permanente Umbauten. Saisonal testen. Court bei Bedarf einlagern. Ideal für Tennishallen im Sommer.",
-    uc3_t: "Verleih & Kommerziell", uc3_p: "WPC Series Registrierung garantiert einheitliche Qualität. Eventveranstalter, Hotels und Gemeinden können zertifizierte Courts mieten.",
-    uc4_t: "Pop-Up & Corporate", uc4_p: "Shopping Malls, Firmenevents, Messen, Teambuilding, Produktlaunches. Professionelles Pickleball wo Menschen zusammenkommen.",
-    cta_title: "BEREIT ZU SPIELEN?", cta_text: "Kontaktieren Sie uns per WhatsApp für ein Angebot oder weitere Informationen.", cta_button: "Per WhatsApp Chatten"
+    nav_advantages:"Vorteile",nav_how:"So funktioniert's",nav_specs:"Spezifikationen",nav_colors:"Farben",nav_usecases:"Einsatzbereiche",nav_contact:"Kontakt",
+    hero_badge:"Das einzige WPC Series zertifizierte Court-System",
+    hero_text:"Das weltweit einzige WPC Series zertifizierte modulare Pickleball-Court-System. Echter Outdoor-Court-Bounce, werkzeugfreier Aufbau durch nur zwei Personen.",
+    hero_cta:"Angebot Anfragen",wpc_strip:"WPC SERIES ZERTIFIZIERT · REGISTRIERT · ÖFFENTLICH GELISTET · WELTWEIT EINZIGARTIG",
+    adv_label:"Warum CertiCourt",adv_title:"15 GRÜNDE FÜR CERTICOURT",
+    adv1_t:"WPC Series Zertifiziert",adv1_p:"Das einzige Court-System der Welt mit offizieller WPC Series Zertifizierung.",adv2_t:"Registriert & Öffentlich",adv2_p:"Jeder Court erhält eine eindeutige ID und wird in der WPC Series Datenbank gelistet.",adv3_t:"Echter Outdoor-Bounce",adv3_p:"Echter Outdoor-Court-Bounce dank unseres Holzsystems.",adv4_t:"Schneller Aufbau",adv4_p:"Zwei Personen, kein Werkzeug.",adv5_t:"Jeder flache Boden",adv5_p:"Beton, Asphalt, Hallenboden — überall einsetzbar.",adv6_t:"Paletten-Transport",adv6_p:"Versand auf Standardpaletten. Passt in Sprinter oder Anhänger.",adv7_t:"Individuelles Branding",adv7_p:"Ihr Logo, Ihre Farben, Ihre Sponsoren.",adv8_t:"Wiederverwendbar & Langlebig",adv8_p:"Konzipiert für hunderte Auf- und Abbauten.",adv9_t:"Verleih-Ready",adv9_p:"Einheitlicher Standard über alle Courts.",adv10_t:"100% Pickleball",adv10_p:"Jedes Detail ist ausschließlich für Pickleball optimiert.",adv11_t:"Sofort Spielbereit",adv11_p:"Keine Setzzeit nötig. Sofort nach dem Aufbau spielbereit.",adv12_t:"Perfekter Bounce — Immer",adv12_p:"Konstanter Bounce unabhängig von Temperatur und Untergrund.",adv13_t:"Keine Spuren",adv13_p:"Kein Klebeband, keine Klebereste, keine Abdrücke.",adv14_t:"Tennishallen im Sommer",adv14_p:"Leerstehende Tennishallen in Pickleball-Arenen verwandeln.",adv15_t:"Pop-Up & Showmatches",adv15_p:"Shopping Malls, Firmenevents, Messen, Festivals.",
+    how_label:"So funktioniert's",how_title:"VON DER PALETTE ZUM SPIEL IN 4 SCHRITTEN",step1_t:"Liefern",step1_p:"Court kommt auf Standardpaletten.",step2_t:"Zusammenstecken",step2_p:"Zwei Personen, kein Werkzeug.",step3_t:"Spielen",step3_p:"Sofort spielbereit. Einfach Pickleball.",step4_t:"Abbauen",step4_p:"Auseinandernehmen, lagern oder transportieren.",
+    specs_label:"Technische Daten",specs_title:"COURT-SPEZIFIKATIONEN",spec1_l:"Fläche",spec2_l:"Material",spec2_v:"Technisches Holz-Panel-System",spec3_l:"Aufbau",spec3_v:"Werkzeugfreies Stecksystem, min. 2 Personen",spec4_l:"Untergrund",spec4_v:"Jeder flache Boden",spec5_l:"Transport",spec5_v:"Standardpaletten",spec6_l:"Bounce",spec6_v:"Echter Outdoor-Court-Bounce",spec7_l:"Zertifizierung",spec7_v:"WPC Series zertifiziert — registriert & öffentlich gelistet",spec8_l:"Branding",spec8_v:"Individuelle Logos & Farben möglich",spec9_l:"Sportart",spec9_v:"Nur Pickleball — 100% optimiert",
+    col_label:"Court Design",col_title:"KONFIGURIEREN SIE IHRE COURT-FARBEN",col_sub:"Wählen Sie aus der vollständigen MAPEI Mapecoat TNS Palette — der professionelle Acrylbelag für alle CERTICOURT-Courts.",
+    col_z0:"Innenbereich",col_z1:"Außenbereich",col_z2:"Küchen-Zone (NVZ)",col_view:"Ansicht:",col_v1:"1 Court",col_v2:"MultiCourt",col_courts:"Courts:",
+    col_summary:"Zusammenfassung",col_print:"Drucken / PDF",col_wa:"Dieses Design anfragen",
+    col_sumtitle:"Gewählte Konfiguration — Mapecoat TNS",col_sum_zone:"Zone",col_sum_color:"Farbe",col_note:"Die gezeigten Farben sind Richtwerte. Die endgültige Auswahl muss anhand der physischen MAPEI-Farbkarte erfolgen.",
+    uc_label:"Einsatzbereiche",uc_title:"WO CERTICOURT SPIELT",uc1_t:"Turniere & Events",uc1_p:"Offizieller WPC Series Turnier-Court.",uc2_t:"Tennis- & Sportvereine",uc2_p:"Pickleball ohne permanente Umbauten anbieten.",uc3_t:"Verleih & Kommerziell",uc3_p:"WPC Series Registrierung garantiert einheitliche Qualität.",uc4_t:"Pop-Up & Corporate",uc4_p:"Shopping Malls, Firmenevents, Messen, Teambuilding.",
+    cta_title:"BEREIT ZU SPIELEN?",cta_text:"Kontaktieren Sie uns per WhatsApp für ein Angebot.",cta_button:"Per WhatsApp Chatten"
   },
   fr: {
-    nav_advantages: "Avantages", nav_how: "Comment ça marche", nav_specs: "Spécifications", nav_usecases: "Utilisations", nav_contact: "Contact",
-    hero_badge: "Le Seul Système de Courts Certifié WPC Series",
-    hero_text: "Le seul système modulaire de courts de pickleball certifié WPC Series au monde. Rebond réel de terrain extérieur, montage sans outils par seulement deux personnes, et chaque court enregistré et répertorié publiquement. Pas de ruban adhésif. Pas d'attente. Pas de compromis.",
-    hero_cta: "Demander un Devis",
-    wpc_strip: "CERTIFIÉ WPC SERIES · ENREGISTRÉ · RÉPERTORIÉ PUBLIQUEMENT · UNIQUE AU MONDE",
-    adv_label: "Pourquoi CertiCourt", adv_title: "15 RAISONS DE CHOISIR CERTICOURT",
-    adv1_t: "Certifié WPC Series", adv1_p: "Le seul système de courts au monde avec certification officielle WPC Series. Non copiable. Standard de tournoi garanti.",
-    adv2_t: "Enregistré et Public", adv2_p: "Chaque court reçoit un identifiant unique et est répertorié dans la base de données WPC Series. Transparence totale.",
-    adv3_t: "Vrai Rebond Extérieur", adv3_p: "Vrai rebond de terrain extérieur grâce à notre système en bois. Pas de sensation de moquette, pas de zones mortes — du pur pickleball.",
-    adv4_t: "Montage Rapide", adv4_p: "Deux personnes, aucun outil. Notre système d'emboîtement breveté permet un montage rapide sans équipe professionnelle.",
-    adv5_t: "Toute Surface Plane", adv5_p: "Béton, asphalte, salle de sport — CertiCourt fonctionne sur toute surface plane, intérieure ou extérieure.",
-    adv6_t: "Transport par Palettes", adv6_p: "Expédié sur palettes standard. Entre dans un utilitaire ou une remorque. Pas de transport lourd nécessaire.",
-    adv7_t: "Branding Personnalisé", adv7_p: "Votre logo, vos couleurs, vos sponsors. Chaque court peut être entièrement personnalisé selon votre identité de marque.",
-    adv8_t: "Réutilisable et Durable", adv8_p: "Conçu pour des centaines de montages et démontages. Achetez une fois, utilisez pendant des années.",
-    adv9_t: "Prêt pour la Location", adv9_p: "Standard uniforme sur tous les courts. Les clients savent toujours ce qu'ils obtiennent. Parfait pour les modèles de location.",
-    adv10_t: "100% Pickleball", adv10_p: "Pas de multi-sport. Chaque détail est optimisé exclusivement pour le pickleball. Aucun compromis.",
-    adv11_t: "Jouable Immédiatement", adv11_p: "Pas de temps de stabilisation. Contrairement aux sols vinyles qui nécessitent des heures, CertiCourt est prêt immédiatement après le montage.",
-    adv12_t: "Rebond Parfait — Toujours", adv12_p: "Rebond constant et reproductible indépendamment de la température, de la surface ou du nombre de montages.",
-    adv13_t: "Zéro Trace", adv13_p: "Pas de ruban, pas de résidus adhésifs, pas de marques au sol. Montez et démontez sans laisser la moindre trace.",
-    adv14_t: "Courts de Tennis en Été", adv14_p: "Transformez les courts de tennis couverts vides en été en arènes de pickleball. Revenus supplémentaires sans modifications permanentes.",
-    adv15_t: "Pop-Up et Exhibitions", adv15_p: "Centres commerciaux, événements d'entreprise, salons, festivals — du pickleball professionnel partout où les gens se rassemblent.",
-    how_label: "Comment ça marche", how_title: "DE LA PALETTE AU JEU EN 4 ÉTAPES",
-    step1_t: "Livrer", step1_p: "Le court arrive sur palettes standard. Utilitaire, remorque ou fret — à vous de choisir.",
-    step2_t: "Assembler", step2_p: "Deux personnes, aucun outil. Le système d'emboîtement breveté fixe les panneaux en place.",
-    step3_t: "Jouer", step3_p: "Prêt instantanément. Pas de stabilisation, pas de ruban, pas d'attente. Juste du pickleball pur.",
-    step4_t: "Démonter", step4_p: "Désassemblez, empilez sur palettes, stockez ou déplacez. Zéro trace laissée.",
-    specs_label: "Spécifications Techniques", specs_title: "SPÉCIFICATIONS DU COURT",
-    spec1_l: "Surface", spec2_l: "Matériau", spec2_v: "Système de panneaux en bois technique", spec3_l: "Montage", spec3_v: "Système d'emboîtement sans outils, min. 2 personnes", spec4_l: "Sol", spec4_v: "Toute surface plane (béton, asphalte, salle de sport)", spec5_l: "Transport", spec5_v: "Palettes standard (compatible utilitaire/remorque)", spec6_l: "Rebond", spec6_v: "Vrai rebond de terrain extérieur", spec7_l: "Certification", spec7_v: "Certifié WPC Series — enregistré et répertorié publiquement", spec8_l: "Branding", spec8_v: "Logos et couleurs personnalisés disponibles", spec9_l: "Sport", spec9_v: "Pickleball uniquement — 100% optimisé",
-    uc_label: "Utilisations", uc_title: "OÙ CERTICOURT JOUE",
-    uc1_t: "Tournois et Événements", uc1_p: "Court officiel de tournoi WPC Series. Montage rapide pour des lieux changeants — des salles de sport aux arènes en plein air.",
-    uc2_t: "Clubs de Tennis et Sportifs", uc2_p: "Ajoutez le pickleball sans construction permanente. Testez le marché par saison. Rangez le court quand vous n'en avez pas besoin.",
-    uc3_t: "Location et Commercial", uc3_p: "L'enregistrement WPC Series garantit une qualité uniforme. Organisateurs, hôtels et municipalités peuvent louer des courts certifiés.",
-    uc4_t: "Pop-Up et Corporate", uc4_p: "Centres commerciaux, événements d'entreprise, salons, team building, lancements. Du pickleball professionnel partout.",
-    cta_title: "PRÊT À JOUER ?", cta_text: "Contactez-nous via WhatsApp pour un devis ou plus d'informations.", cta_button: "Chatter sur WhatsApp"
+    nav_advantages:"Avantages",nav_how:"Comment ça marche",nav_specs:"Spécifications",nav_colors:"Couleurs",nav_usecases:"Utilisations",nav_contact:"Contact",
+    hero_badge:"Le Seul Système de Courts Certifié WPC Series",
+    hero_text:"Le seul système modulaire de courts de pickleball certifié WPC Series au monde. Rebond réel de terrain extérieur, montage sans outils.",
+    hero_cta:"Demander un Devis",wpc_strip:"CERTIFIÉ WPC SERIES · ENREGISTRÉ · RÉPERTORIÉ PUBLIQUEMENT · UNIQUE AU MONDE",
+    adv_label:"Pourquoi CertiCourt",adv_title:"15 RAISONS DE CHOISIR CERTICOURT",
+    adv1_t:"Certifié WPC Series",adv1_p:"Le seul système de courts avec certification officielle WPC Series.",adv2_t:"Enregistré et Public",adv2_p:"Chaque court reçoit un identifiant unique.",adv3_t:"Vrai Rebond Extérieur",adv3_p:"Vrai rebond de terrain extérieur grâce à notre système en bois.",adv4_t:"Montage Rapide",adv4_p:"Deux personnes, aucun outil.",adv5_t:"Toute Surface Plane",adv5_p:"Béton, asphalte, salle de sport — partout.",adv6_t:"Transport par Palettes",adv6_p:"Expédié sur palettes standard.",adv7_t:"Branding Personnalisé",adv7_p:"Votre logo, vos couleurs, vos sponsors.",adv8_t:"Réutilisable et Durable",adv8_p:"Conçu pour des centaines de montages.",adv9_t:"Prêt pour la Location",adv9_p:"Standard uniforme sur tous les courts.",adv10_t:"100% Pickleball",adv10_p:"Chaque détail est optimisé pour le pickleball.",adv11_t:"Jouable Immédiatement",adv11_p:"Prêt immédiatement après le montage.",adv12_t:"Rebond Parfait — Toujours",adv12_p:"Rebond constant et reproductible.",adv13_t:"Zéro Trace",adv13_p:"Pas de ruban, pas de résidus, pas de marques.",adv14_t:"Courts de Tennis en Été",adv14_p:"Transformez les courts de tennis en arènes de pickleball.",adv15_t:"Pop-Up et Exhibitions",adv15_p:"Centres commerciaux, événements, festivals.",
+    how_label:"Comment ça marche",how_title:"DE LA PALETTE AU JEU EN 4 ÉTAPES",step1_t:"Livrer",step1_p:"Le court arrive sur palettes standard.",step2_t:"Assembler",step2_p:"Deux personnes, aucun outil.",step3_t:"Jouer",step3_p:"Prêt instantanément.",step4_t:"Démonter",step4_p:"Désassemblez, stockez ou déplacez.",
+    specs_label:"Spécifications Techniques",specs_title:"SPÉCIFICATIONS DU COURT",spec1_l:"Surface",spec2_l:"Matériau",spec2_v:"Système de panneaux en bois technique",spec3_l:"Montage",spec3_v:"Sans outils, min. 2 personnes",spec4_l:"Sol",spec4_v:"Toute surface plane",spec5_l:"Transport",spec5_v:"Palettes standard",spec6_l:"Rebond",spec6_v:"Vrai rebond de terrain extérieur",spec7_l:"Certification",spec7_v:"Certifié WPC Series — enregistré et répertorié",spec8_l:"Branding",spec8_v:"Logos et couleurs personnalisés",spec9_l:"Sport",spec9_v:"Pickleball uniquement — 100% optimisé",
+    col_label:"Design du Court",col_title:"CONFIGUREZ LES COULEURS DE VOTRE COURT",col_sub:"Choisissez dans la palette MAPEI Mapecoat TNS — le revêtement acrylique professionnel de tous les courts CERTICOURT.",
+    col_z0:"Intérieur",col_z1:"Extérieur",col_z2:"Zone de Non-Volée",col_view:"Vue :",col_v1:"1 Court",col_v2:"MultiCourt",col_courts:"Courts :",
+    col_summary:"Résumé",col_print:"Imprimer / PDF",col_wa:"Demander ce design",
+    col_sumtitle:"Configuration sélectionnée — Mapecoat TNS",col_sum_zone:"Zone",col_sum_color:"Couleur",col_note:"Les couleurs affichées sont indicatives. La sélection finale doit être faite avec la carte couleur physique MAPEI.",
+    uc_label:"Utilisations",uc_title:"OÙ CERTICOURT JOUE",uc1_t:"Tournois et Événements",uc1_p:"Court officiel de tournoi WPC Series.",uc2_t:"Clubs de Tennis et Sportifs",uc2_p:"Ajoutez le pickleball sans construction permanente.",uc3_t:"Location et Commercial",uc3_p:"L'enregistrement WPC Series garantit la qualité.",uc4_t:"Pop-Up et Corporate",uc4_p:"Centres commerciaux, événements, salons.",
+    cta_title:"PRÊT À JOUER ?",cta_text:"Contactez-nous via WhatsApp pour un devis.",cta_button:"Chatter sur WhatsApp"
   }
 };
 
@@ -964,27 +665,22 @@ function setLang(lang) {
   document.querySelectorAll('.lang-bar button').forEach(b => b.classList.remove('active'));
   document.querySelector(`.lang-bar button[onclick="setLang('${lang}')"]`).classList.add('active');
   document.documentElement.lang = lang;
-  
   const t = translations[lang];
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (t[key]) el.textContent = t[key];
   });
-  
   localStorage.setItem('certicourt-lang', lang);
 }
 
-// Init with saved language or browser language
 const saved = localStorage.getItem('certicourt-lang');
 const browserLang = navigator.language.substring(0,2);
 const defaultLang = saved || (['es','de','fr'].includes(browserLang) ? browserLang : 'en');
 setLang(defaultLang);
 
-// Mobile menu
 const style = document.createElement('style');
 style.textContent = `.nav-links.show { display: flex !important; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #fff; padding: 20px; border-bottom: 1px solid #eee; box-shadow: 0 8px 24px rgba(0,0,0,0.08); }`;
 document.head.appendChild(style);
 </script>
-
 </body>
 </html>
